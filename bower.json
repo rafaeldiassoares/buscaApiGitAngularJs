@@ -1,0 +1,17 @@
+{
+  "name": "angularProject",
+  "version": "0.0.1",
+  "description": "teste angular",
+  "main": "index.html",
+  "authors": [
+    "Rafael"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
