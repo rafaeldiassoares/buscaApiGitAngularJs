@@ -1,0 +1,44 @@
+<!doctype html>
+<html ng-app="myApp">
+    <head>  
+        <script src="./bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="controller.js"></script>        
+    </head>
+    <body>
+        <div ng-controller="UserRetrieveController">
+            <section>
+                <article>
+                    <form>
+                        <input type="text"  ng-model="search"
+                                            ng-model-options="{ updateOn: 'default blur', debounce: {'default': 500, 'blur': 0} }"
+                                            ng-change="searchUser()">
+                    </form>
+                </article>  
+            </section>
+
+            <section class="vcard">
+                <div>
+                    <img alt="{{user.name}}" ng-src="{{user.avatar_url}}" width="100">
+                </div>
+                <div>
+                    Nickname: 
+                    <span class="fn nickname">
+                        {{user.login}}
+                    </span>                
+                </div>
+                <div>
+                    Blog:
+                    <a class="url fn org" ng-href="{{user.blog}}">{{ user.blog }}</a>
+                </div>
+                <div class="adr">
+                    <span class="type">
+                        Location
+                    </span>:
+                    <span class="locality">
+                        {{user.location}}
+                    </span>
+                </div>
+            </section>
+        </div>    
+    </body>
+</html>
